@@ -5,7 +5,7 @@ CREATE TABLE clients (
     name VARCHAR(128) UNIQUE NOT NULL
 );
 
-
+-- Testing
 
 -- 2) Create Request Table
 
