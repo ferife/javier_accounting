@@ -1,0 +1,46 @@
+$color-primary: #347b98;
+$color-secondary: #0247FE;
+$color-pale: #E3F7D4;
+$color-mid: #66B032;
+$color-dark: #091534;
+
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+
+$body-font: Courier;
+$header-font: Helvetica;
+
+body {
+    font-family: $body-font;
+}
+
+h1, h2, h3 {
+    font-family: $header-font;
+}
+
+h2 {
+    color: $color-primary;
+}
+
+header {
+    h2 {
+        color: $color-pale;
+    }
+}
+
+.site-footer {
+    background-image: linear-gradient($color-pale, white);
+    padding: 20px 0;
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 30px;
+    background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
+    color: white;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
