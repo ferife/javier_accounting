@@ -167,48 +167,13 @@ CREATE TABLE alterations (
 
 
 
--- 15) FK alterations to requests & clients
+-- 15) CHK alterations has to have client_id or request_id, but not both
 
 ALTER TABLE dbo.alterations     -- This constraint ensures that the alteration can happen to a client or a request, but not both
     ADD CONSTRAINT CHK_clientOrRequest CHECK
-    ((client_id IS NOT NULL OR request_id IS NOT NULL)
-    AND NOT (client_id IS NOT NULL AND request_id IS NOT NULL));
+    (
+        (client_id IS NOT NULL OR request_id IS NOT NULL)   -- One of them has to NOT BE null
+        AND NOT 
+        (client_id IS NOT NULL AND request_id IS NOT NULL)  -- One of them has to BE null
+    );
 
-ALTER TABLE dbo.alterations
-    ADD CONSTRAINT FK_alterations_clients
-    FOREIGN KEY (client_id)
-        REFERENCES dbo.clients
-        ON DELETE CASCADE
-        ON UPDATE CASCADE;
-
-ALTER TABLE dbo.alterations
-    ADD CONSTRAINT FK_alterations_requests
-    FOREIGN KEY (request_id)
-        REFERENCES dbo.requests
-        ON DELETE CASCADE
-        ON UPDATE CASCADE;
-
-
-    
-
-
-
--- 16) FK alterations to alteration types
-
-ALTER TABLE dbo.alterations
-    ADD CONSTRAINT fk_alterations_alteration_types
-    FOREIGN KEY (alteration_type_id)
-        REFERENCES dbo.alteration_types
-        ON DELETE CASCADE
-        ON UPDATE CASCADE;
-
-
-
--- 17) FK Alterations to Users
-
-ALTER TABLE dbo.alterations
-    ADD CONSTRAINT fk_alterations_users
-    FOREIGN KEY (user_id)
-        REFERENCES dbo.alterations
-        ON DELETE CASCADE
-        ON UPDATE CASCADE;

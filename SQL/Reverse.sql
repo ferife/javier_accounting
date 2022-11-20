@@ -1,20 +1,4 @@
--- 16) FK alterations to alteration types
-
-ALTER TABLE dbo.alterations
-    DROP CONSTRAINT fk_alterations_alteration_types;
-
-ALTER TABLE dbo.alterations
-    DROP COLUMN alteration_type_id;
-
-
-
 -- 15) FK alterations to requests & clients
-
-ALTER TABLE dbo.alterations
-    DROP CONSTRAINT FK_alterations_clients;
-
-ALTER TABLE dbo.alterations
-    DROP CONSTRAINT FK_alterations_requests;
 
 ALTER TABLE dbo.alterations
     DROP CONSTRAINT CHK_clientOrRequest;
