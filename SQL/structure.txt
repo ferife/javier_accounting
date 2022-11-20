@@ -1,0 +1,18 @@
+Table of locations
+
+
+Table of user types
+Table of concepts (categories of request)
+Track user relationship based on assigning tasks
+Track user relationship based on logging user interaction (low priority, leave it for last)
+User type 1 - enters data, basically a receptionist
+User type 2 - follows through, the actual accountant
+
+Client table - include column for payment schedule
+
+Tools: 
+SSMS
+    Integrated - Database Diagram
+VS Code
+
+Triggers - When, for example, creating an entry in one table, creates appropriate entries in related tables
