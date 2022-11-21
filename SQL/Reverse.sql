@@ -1,3 +1,11 @@
+-- 19) FN convert request details table row to JSON
+-- 18) FN convert requests table row to JSON
+-- 17) FN convert concepts table row to JSON
+
+DROP FUNCTION IF EXISTS fnJSON_conceptsRow;
+
+
+
 -- 16) FN convert locations table row to JSON
 
 DROP FUNCTION IF EXISTS fnJSON_locationsRow;

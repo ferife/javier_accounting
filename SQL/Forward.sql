@@ -215,7 +215,28 @@ CREATE TABLE alterations (
 
 
 
--- 17) FN convert requests table row to JSON
+-- 17) FN convert concepts table row to JSON
+    -- MUST BE THE ONLY STATEMENT IN BATCH
 
--- 18) FN convert request details table row to JSON
--- 19) FN convert concepts table row to JSON
+-- CREATE FUNCTION fnJSON_conceptsRow
+-- (@row_id INT)
+-- RETURNS VARCHAR(MAX)
+-- AS BEGIN
+--     DECLARE @result VARCHAR(MAX)
+
+--     DECLARE @pConceptName VARCHAR(128) = (SELECT concept_name FROM dbo.concepts WHERE id=@row_id)
+
+--     SET @result = '{"id":' + CONVERT(VARCHAR,@row_id) + ',"name":"' + CONVERT(VARCHAR,@pConceptName) + '"}'
+
+--     RETURN @result
+-- END
+
+
+
+-- 18) FN convert requests table row to JSON
+    -- MUST BE THE ONLY STATEMENT IN BATCH
+
+
+
+-- 19) FN convert request details table row to JSON
+    -- MUST BE THE ONLY STATEMENT IN BATCH
