@@ -236,6 +236,40 @@ CREATE TABLE alterations (
 -- 18) FN convert requests table row to JSON
     -- MUST BE THE ONLY STATEMENT IN BATCH
 
+-- CREATE FUNCTION fnJSON_requestsRow
+-- (@row_id INT)
+-- RETURNS VARCHAR(MAX)
+-- AS BEGIN
+--     DECLARE @result VARCHAR(MAX)
+
+--     DECLARE @pRequestDate DATETIME = (SELECT request_date FROM dbo.requests WHERE id=@row_id)
+--     DECLARE @pResolvedInt BIT = (SELECT resolved FROM dbo.requests WHERE id=@row_id)
+
+--     DECLARE @pResolvedTF VARCHAR(5)
+--     IF @pResolvedInt = 1
+--         BEGIN
+--             SET @pResolvedTF = 'true'
+--         END
+--     ELSE
+--         BEGIN
+--             SET @pResolvedTF = 'false'
+--         END
+
+
+--     DECLARE @pClientId INT = (SELECT client_id FROM dbo.requests WHERE id=@row_id)
+--     DECLARE @pConceptId INT = (SELECT concept_id FROM dbo.requests WHERE id=@row_id)
+
+--     SET @result = 
+--     '{"id":' + CONVERT(VARCHAR,@row_id) + ',' + 
+--     '"request_date":' + '"' + CONVERT(VARCHAR,@pRequestDate) + '",' + 
+--     '"resolved":' + CONVERT(VARCHAR,@pResolvedTF) + ',' +
+--     '"client_id":' + CONVERT(VARCHAR,@pClientId) + ',' +
+--     '"concept_id":' + CONVERT(VARCHAR,@pConceptId) +
+--     '"}'
+
+--     RETURN @result
+-- END
+
 
 
 -- 19) FN convert request details table row to JSON
