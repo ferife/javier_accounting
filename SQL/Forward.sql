@@ -213,3 +213,9 @@ CREATE TABLE alterations (
 --     RETURN @result
 -- END
 
+
+
+-- 17) FN convert requests table row to JSON
+
+-- 18) FN convert request details table row to JSON
+-- 19) FN convert concepts table row to JSON

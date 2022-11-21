@@ -2,6 +2,8 @@
 
 DROP FUNCTION IF EXISTS fnJSON_locationsRow;
 
+
+
 -- 15) FN convert clients table row to JSON
 
 DROP FUNCTION IF EXISTS fnJSON_clientsRow;
@@ -28,8 +30,11 @@ DROP TABLE IF EXISTS dbo.alteration_types;
 
 -- 11) FK Users Table to User Types Table
 
-ALTER TABLE dbo.users
-    DROP CONSTRAINT IF EXISTS fk_users_user_types;
+IF (SELECT object_id FROM sys.objects WHERE type = 'U' AND name = 'users' AND SCHEMA_NAME(schema_id) = 'dbo') IS NOT NULL
+BEGIN
+    ALTER TABLE dbo.users
+        DROP CONSTRAINT IF EXISTS fk_users_user_types
+END
 
 
 
@@ -41,11 +46,14 @@ DROP TABLE IF EXISTS dbo.user_types;
 
 -- 9) FK Request Table to Concepts Table
 
-ALTER TABLE dbo.requests
-    DROP CONSTRAINT IF EXISTS fk_requests_concepts;
+IF (SELECT object_id FROM sys.objects WHERE type = 'U' AND name = 'users' AND SCHEMA_NAME(schema_id) = 'dbo') IS NOT NULL
+BEGIN
+    ALTER TABLE dbo.requests
+        DROP CONSTRAINT IF EXISTS fk_requests_concepts
 
-ALTER TABLE dbo.requests
-    DROP COLUMN IF EXISTS concept_id;
+    ALTER TABLE dbo.requests
+        DROP COLUMN IF EXISTS concept_id
+END;
 
 
 
@@ -57,11 +65,14 @@ DROP TABLE IF EXISTS dbo.concepts;
 
 -- 7) FK Client Table to Location Table
 
-ALTER TABLE dbo.clients
-    DROP CONSTRAINT IF EXISTS fk_clients_locations;
+IF (SELECT object_id FROM sys.objects WHERE type = 'U' AND name = 'users' AND SCHEMA_NAME(schema_id) = 'dbo') IS NOT NULL
+BEGIN
+    ALTER TABLE dbo.clients
+        DROP CONSTRAINT IF EXISTS fk_clients_locations
 
-ALTER TABLE dbo.clients
-    DROP COLUMN IF EXISTS location_id;
+    ALTER TABLE dbo.clients
+        DROP COLUMN IF EXISTS location_id
+END;
 
 
 
@@ -85,11 +96,14 @@ DROP TABLE IF EXISTS dbo.requests_details;
 
 -- 3) FK Request Table to Client Table
 
-ALTER TABLE dbo.requests
-    DROP CONSTRAINT IF EXISTS fk_requests_clients;
+IF (SELECT object_id FROM sys.objects WHERE type = 'U' AND name = 'users' AND SCHEMA_NAME(schema_id) = 'dbo') IS NOT NULL
+BEGIN
+    ALTER TABLE dbo.requests
+        DROP CONSTRAINT IF EXISTS fk_requests_clients
 
-ALTER TABLE dbo.requests
-    DROP COLUMN IF EXISTS client_id;
+    ALTER TABLE dbo.requests
+        DROP COLUMN IF EXISTS client_id
+END;
 
 
 
