@@ -188,5 +188,28 @@ CREATE TABLE alterations (
 
 
 
+-- 16) FN convert locations table row to JSON
+    -- MUST BE THE ONLY STATEMENT IN BATCH
 
+-- CREATE FUNCTION fnJSON_locationsRow
+-- (@row_id INT)
+-- RETURNS VARCHAR(MAX)
+-- AS BEGIN
+--     DECLARE @result VARCHAR(MAX)
+
+--     DECLARE @pCity VARCHAR(128) = (SELECT city FROM dbo.locations WHERE id=@row_id)
+--     DECLARE @pCountry VARCHAR(128) = (SELECT country FROM dbo.locations WHERE id=@row_id)
+
+--     IF (SELECT state_province FROM dbo.locations WHERE id=@row_id) IS NULL
+--         BEGIN
+--             SET @result = '{"id":' + CONVERT(VARCHAR,@row_id) + ',"city":"' + CONVERT(VARCHAR,@pCity) + '","country":"' + CONVERT(VARCHAR,@pCountry) + '"}'
+--         END
+--     ELSE
+--         BEGIN
+--             DECLARE @pState VARCHAR(128) = (SELECT state_province FROM dbo.locations WHERE id=@row_id)
+--             SET @result = '{"id":' + CONVERT(VARCHAR,@row_id) + ',"city":"' + CONVERT(VARCHAR,@pCity) + '","state_province":"' + CONVERT(VARCHAR,@pState) + '","country":"' + CONVERT(VARCHAR,@pCountry) + '"}'
+--         END
+
+--     RETURN @result
+-- END
 

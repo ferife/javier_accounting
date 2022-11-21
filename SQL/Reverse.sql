@@ -1,3 +1,7 @@
+-- 16) FN convert locations table row to JSON
+
+DROP FUNCTION IF EXISTS fnJSON_locationsRow;
+
 -- 15) FN convert clients table row to JSON
 
 DROP FUNCTION IF EXISTS fnJSON_clientsRow;
