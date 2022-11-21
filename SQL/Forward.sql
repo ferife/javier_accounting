@@ -161,19 +161,32 @@ CREATE TABLE alterations (
     alteration_time DATETIME DEFAULT GETDATE(),
     user_id INT NOT NULL,
     alteration_type_id INT NOT NULL,
-    client_id INT,
-    request_id INT,
+    table_altered VARCHAR(128) NOT NULL,
+    row_id INT NOT NULL,
+    old_values NVARCHAR(MAX) NOT NULL, -- Contains JSON of old values
+    new_values NVARCHAR(MAX) NOT NULL, -- Contains JSON of new values
 );
 
 
 
--- 15) CHK alterations has to have client_id or request_id, but not both
+-- 15) FN convert clients table row to JSON
+    -- MUST BE THE ONLY STATEMENT IN BATCH
 
-ALTER TABLE dbo.alterations     -- This constraint ensures that the alteration can happen to a client or a request, but not both
-    ADD CONSTRAINT CHK_clientOrRequest CHECK
-    (
-        (client_id IS NOT NULL OR request_id IS NOT NULL)   -- One of them has to NOT BE null
-        AND NOT 
-        (client_id IS NOT NULL AND request_id IS NOT NULL)  -- One of them has to BE null
-    );
+-- CREATE FUNCTION fnJSON_clientsRow
+-- (@row_id INT)
+-- RETURNS VARCHAR(MAX)
+-- AS BEGIN
+--     DECLARE @result VARCHAR(MAX)
+
+--     DECLARE @pName VARCHAR(128) = (SELECT name FROM dbo.clients WHERE id=@row_id)
+--     DECLARE @pLoc INT = (SELECT location_id FROM dbo.clients WHERE id=@row_id)
+
+--     SET @result = '{"id":' + CONVERT(VARCHAR,@row_id) + ',"name":"' + CONVERT(VARCHAR,@pName) + '","location_id":' + CONVERT(VARCHAR,@pLoc) + '}' 
+
+--     RETURN @result
+-- END
+
+
+
+
 
