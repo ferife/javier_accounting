@@ -17,13 +17,17 @@
 
 </head>
 <body>
-
+    <!-- FIXME make jumbotron take up less vertical space -->
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <h1>Program Name</h1>
                     <h2>Program Tagline</h2>
+                </div>
+                <!-- TODO function to make user's first name appear below -->
+                <div class="col">
+                    <h3>Hello, INSERT USER'S FIRST NAME HERE</h3>
                 </div>
             </div>
         </div>
@@ -35,18 +39,39 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="accountingNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
+                <ul class="navbar-nav mr-auto">
+                    <!-- TODO Change contents of navbar to what will actually exist -->
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Sites</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <!-- TODO Add functionality to Add Client button -->
+                    <button class="btn my-2 my-sm-0 mx-2 frf-add-client-btn" type="button">Add Client</button>
+                    <!-- TODO Add functionality to search bar -->
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" />
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
         </div>
     </nav>
 
-    <div></div>
 
+
+
+    <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col">
+                Example Content
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
     <footer>
         <div class="container">
             <div class="row">
@@ -57,14 +82,18 @@
                     </ul>
                 </div>
                 <div class="col text-center">   <!-- Contact Us -->
-                    Tel: 1-234-567-8900<br />
+                    Tel: 1-234-567-8900
+                    &#8212;  
                     Email: mail@domain.com
                 </div>
+                <!-- TODO Add Settings button -->
+                <!-- TODO Add Logout button -->
+                <!-- TODO Make footer stick to bottom of screen -->
+                <!-- TODO Make footer stand out from rest of page -->
             </div>
         </div>
         
     </footer>
-    
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
@@ -72,4 +101,5 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

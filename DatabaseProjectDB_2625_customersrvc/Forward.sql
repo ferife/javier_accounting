@@ -288,4 +288,9 @@ CREATE TABLE alterations (
 -- 19) FN convert request details table row to JSON
     -- MUST BE THE ONLY STATEMENT IN BATCH
 
--- CREATE FUNCTION fnJSON_requestDetailsRow
+-- //TODO Create function to convert request details table row to JSON
+-- //TODO Compare old row content JSON to new row content JSON
+-- //TODO If there's a difference between old row content JSON and new row content JSON, then create new Alterations row
+-- //TODO Create function to create new Alterations row on row insert for all main tables
+-- //TODO Create function to create new Alterations row on row update for all main tables
+-- //TODO Create function to create new Alterations row on row delete for all main tables

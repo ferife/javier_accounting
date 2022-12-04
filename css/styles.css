@@ -21,10 +21,14 @@ header h2 {
   color: white; }
 
 .row-content {
-  padding: 50px 0;
+  padding: 20px 0;
   border-bottom: 1px ridge;
-  min-height: 200px; }
+  min-height: 10px; }
 
 .navbar {
-    background-color: #66B032;
-}
+  background-color: #66B032; }
+
+.frf-add-client-btn {
+  background-color: #0247FE;
+  color: #E3F7D4;
+  border-color: #E3F7D4; }

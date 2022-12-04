@@ -40,11 +40,17 @@ header {
 }
 
 .row-content {
-    padding: 50px 0;
+    padding: 20px 0;
     border-bottom: 1px ridge;
-    min-height: 200px;
+    min-height: 10px;
 }
 
 .navbar {
     background-color: $color-mid;
+}
+
+.frf-add-client-btn {
+    background-color: $color-secondary;
+    color: $color-pale;
+    border-color: $color-pale;
 }
