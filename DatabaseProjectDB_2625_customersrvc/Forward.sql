@@ -287,3 +287,5 @@ CREATE TABLE alterations (
 
 -- 19) FN convert request details table row to JSON
     -- MUST BE THE ONLY STATEMENT IN BATCH
+
+-- CREATE FUNCTION fnJSON_requestDetailsRow
