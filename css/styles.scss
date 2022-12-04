@@ -26,6 +26,10 @@ header {
     h2 {
         color: $color-pale;
     }
+    p {
+        margin-top:auto;
+        margin-bottom: auto;
+    }
 }
 
 .jumbotron {
@@ -54,9 +58,13 @@ header {
 footer {
     width: 100%;
     background-color: $color-primary;
-    color: $color-black-transparent;
+    color: $color-pale;
     a {
         color: $color-pale;
         text-decoration: underline;
+    }
+    p, a {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
