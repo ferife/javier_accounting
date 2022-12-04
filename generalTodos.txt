@@ -1,5 +1,9 @@
-TODO Create Search page
+TODO Make a Search page
 
-TODO Create Client Profile page
+TODO Make a Client Profile page
 
-TODO Create User Settings page
+TODO Make a User Settings page
+
+TODO Make an Add Client page
+
+TODO Make a Login page

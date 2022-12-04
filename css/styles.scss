@@ -6,6 +6,7 @@ $color-dark: #091534;
 
 $color-black-transparent: rgba(0, 0, 0, 0.5);
 
+// TODO Set nicer-looking fonts
 $body-font: Courier;
 $header-font: Helvetica;
 
@@ -27,14 +28,9 @@ header {
     }
 }
 
-.site-footer {
-    background-image: linear-gradient($color-pale, white);
-    padding: 20px 0;
-}
-
 .jumbotron {
     margin: 0;
-    padding: 30px;
+    padding: 10px;
     background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
     color: white;
 }
@@ -53,4 +49,14 @@ header {
     background-color: $color-secondary;
     color: $color-pale;
     border-color: $color-pale;
+}
+
+footer {
+    width: 100%;
+    background-color: $color-primary;
+    color: $color-black-transparent;
+    a {
+        color: $color-pale;
+        text-decoration: underline;
+    }
 }
