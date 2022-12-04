@@ -20,10 +20,9 @@ header p {
   background-image: linear-gradient(to right, #0247FE, #347b98, #091534);
   color: white; }
 
-.row-content {
-  padding: 20px 0;
-  border-bottom: 1px ridge;
-  min-height: 10px; }
+.frf-list-item {
+  border-bottom: 1px dashed;
+  border-color: #66B032; }
 
 .navbar {
   background-color: #66B032; }

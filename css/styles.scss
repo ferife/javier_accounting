@@ -39,10 +39,11 @@ header {
     color: white;
 }
 
-.row-content {
-    padding: 20px 0;
-    border-bottom: 1px ridge;
-    min-height: 10px;
+.frf-list-item {
+    // padding: 20px 0;
+    border-bottom: 1px dashed;
+    border-color: $color-mid;
+    // min-height: 10px;
 }
 
 .navbar {
@@ -68,3 +69,4 @@ footer {
         margin-bottom: auto;
     }
 }
+
