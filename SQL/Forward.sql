@@ -202,12 +202,21 @@ CREATE TABLE alterations (
 
 --     IF (SELECT state_province FROM dbo.locations WHERE id=@row_id) IS NULL
 --         BEGIN
---             SET @result = '{"id":' + CONVERT(VARCHAR,@row_id) + ',"city":"' + CONVERT(VARCHAR,@pCity) + '","country":"' + CONVERT(VARCHAR,@pCountry) + '"}'
+--             SET @result = '{' + 
+--                 '"id":' + CONVERT(VARCHAR,@row_id) + ',' + 
+--                 '"city":' + '"' + CONVERT(VARCHAR,@pCity) + '",' + 
+--                 '"country":' + '"' + CONVERT(VARCHAR,@pCountry) + '"' + 
+--             '}'
 --         END
 --     ELSE
 --         BEGIN
 --             DECLARE @pState VARCHAR(128) = (SELECT state_province FROM dbo.locations WHERE id=@row_id)
---             SET @result = '{"id":' + CONVERT(VARCHAR,@row_id) + ',"city":"' + CONVERT(VARCHAR,@pCity) + '","state_province":"' + CONVERT(VARCHAR,@pState) + '","country":"' + CONVERT(VARCHAR,@pCountry) + '"}'
+--             SET @result = '{' + 
+--                 '"id":' + CONVERT(VARCHAR,@row_id) + ',' + 
+--                 '"city":' + '"' + CONVERT(VARCHAR,@pCity) + '",' + 
+--                 '"state_province":' + '"' + CONVERT(VARCHAR,@pState) + '",' + 
+--                 '"country":' + '"' + CONVERT(VARCHAR,@pCountry) + '"' + 
+--             '}'
 --         END
 
 --     RETURN @result
@@ -226,7 +235,10 @@ CREATE TABLE alterations (
 
 --     DECLARE @pConceptName VARCHAR(128) = (SELECT concept_name FROM dbo.concepts WHERE id=@row_id)
 
---     SET @result = '{"id":' + CONVERT(VARCHAR,@row_id) + ',"name":"' + CONVERT(VARCHAR,@pConceptName) + '"}'
+--     SET @result = '{' + 
+--         '"id":' + CONVERT(VARCHAR,@row_id) + ',' + 
+--         '"name":' + '"' + CONVERT(VARCHAR,@pConceptName) + '"' + 
+--     '}'
 
 --     RETURN @result
 -- END
@@ -260,12 +272,13 @@ CREATE TABLE alterations (
 --     DECLARE @pConceptId INT = (SELECT concept_id FROM dbo.requests WHERE id=@row_id)
 
 --     SET @result = 
---     '{"id":' + CONVERT(VARCHAR,@row_id) + ',' + 
---     '"request_date":' + '"' + CONVERT(VARCHAR,@pRequestDate) + '",' + 
---     '"resolved":' + CONVERT(VARCHAR,@pResolvedTF) + ',' +
---     '"client_id":' + CONVERT(VARCHAR,@pClientId) + ',' +
---     '"concept_id":' + CONVERT(VARCHAR,@pConceptId) +
---     '"}'
+--     '{' + 
+--         '"id":' + CONVERT(VARCHAR,@row_id) + ',' + 
+--         '"request_date":' + '"' + CONVERT(VARCHAR,@pRequestDate) + '",' + 
+--         '"resolved":' + CONVERT(VARCHAR,@pResolvedTF) + ',' +
+--         '"client_id":' + CONVERT(VARCHAR,@pClientId) + ',' +
+--         '"concept_id":' + CONVERT(VARCHAR,@pConceptId) + '"' +
+--     '}'
 
 --     RETURN @result
 -- END
