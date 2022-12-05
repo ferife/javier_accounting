@@ -7,3 +7,5 @@ TODO Make a User Settings page
 TODO Make an Add Client page
 
 TODO Make a Login page
+
+TODO Add some place where users can receive and view notifications

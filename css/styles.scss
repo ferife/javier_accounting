@@ -1,10 +1,11 @@
-// TODO change color scheme to something nicer looking
-    // Take a look at the Triadic color scheme option in W3schools
-$color-primary: #347b98;
-$color-secondary: #0247FE;
-$color-pale: #E3F7D4;
-$color-mid: #66B032;
-$color-dark: #091534;
+// Color scheme options
+    // option 1
+    $option1-color-primary: #3A74B7;
+    $option1-color-pale: #7FA8D7;
+    $option1-color-paler: #DCE7F4;
+    $option1-color-dark: #214269;
+    $option1-color-darker: #102034;
+    $option1-color-grey: #616161;
 
 $color-black-transparent: rgba(0, 0, 0, 0.5);
 
@@ -21,12 +22,15 @@ h1, h2, h3 {
 }
 
 h2 {
-    color: $color-primary;
+    color: $option1-color-primary;
 }
 
 header {
+    h1 {
+        color: $option1-color-pale;
+    }
     h2 {
-        color: $color-pale;
+        color: $option1-color-paler;
     }
     p {
         margin-top:auto;
@@ -34,12 +38,24 @@ header {
     }
 }
 
+.jumbotron {
+    margin: 0;
+    padding: 10px;
+    // background-color: $option1-color-paler;
+    background-image: linear-gradient(to right, $option1-color-darker, $option1-color-primary, $option1-color-paler);
+    color: $option1-color-dark;
+}
+
+.bg-frf-dark {
+    background-color: $option1-color-dark;
+};
+
 footer {
     width: 100%;
-    background-color: $color-primary;
-    color: $color-pale;
+    background-color: $option1-color-darker;
+    color: $option1-color-pale;
     a {
-        color: $color-pale;
+        color: $option1-color-pale;
         text-decoration: underline;
     }
     p, a {
@@ -48,38 +64,43 @@ footer {
     }
 }
 
-
-.jumbotron {
-    margin: 0;
-    padding: 10px;
-    background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
-    color: white;
-}
-
 .frf-list-item {
-    border-bottom: 1px dashed;
-    border-color: $color-mid;
+    border-bottom: 2px dashed;
+    border-color: $option1-color-pale;
 }
 
 .navbar {
-    background-color: $color-mid;
+    background-color: $option1-color-primary;
 }
 
 .frf-add-client-btn {
-    background-color: $color-secondary;
-    color: $color-pale;
-    border-color: $color-pale;
+    background-color: $option1-color-dark;
+    color: $option1-color-pale;
+    border-color: $option1-color-pale
 }
 
-
-.frf-add-client-btn:hover {
-    color: $color-secondary;
+.frf-search-btn:hover {
+    color: $option1-color-primary;
     background-color: white;
 }
 
-.frf-table-bordered th, .frf-table-bordered td {
-    border-color: $color-mid;
+.frf-add-client-btn:hover {
+    color: $option1-color-dark;
+    background-color: white;
 }
+
+.thead-frf-dark, .thead-frf-dark th {
+    background-color: $option1-color-dark;
+    color: $option1-color-pale;
+    border: none;
+}
+
+
+
+
+
+
+
 
 
 // BUG The stuff below is just for testing purposes. Please delete as soon as it becomes unnecessary

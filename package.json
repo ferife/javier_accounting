@@ -1,35 +1,39 @@
 {
-  "name": "javier",
-  "version": "1.0.0",
-  "description": "This is a website for accounting thing Javier wants me to do.",
-  "main": "index.html",
-  "scripts": {
-    "lite": "lite-server",
-    "scss": "node-sass -o css/ css/",
-    "start": "npm run watch:all",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ferife/javier_accounting.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ferife/javier_accounting/issues"
-  },
-  "homepage": "https://github.com/ferife/javier_accounting#readme",
-  "devDependencies": {
-    "lite-server": "^2.6.1",
-    "node-sass": "^6.0.1",
-    "onchange": "^7.0.0",
-    "parallelshell": "3.0.1"
-  },
-  "dependencies": {
-    "bootstrap": "^4.5.2",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
-  }
+    "name": "javier",
+    "version": "1.0.0",
+    "description": "This is a website for accounting thing Javier wants me to do.",
+    "main": "index.html",
+    "scripts": {
+        "lite": "lite-server",
+        "scss": "node-sass -o css/ css/",
+        "start": "npm run watch:all",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+        "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ferife/javier_accounting.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ferife/javier_accounting/issues"
+    },
+    "homepage": "https://github.com/ferife/javier_accounting#readme",
+    "devDependencies": {
+        "imagemin-cli": "^5.1.0",
+        "lite-server": "^2.6.1",
+        "node-sass": "^6.0.1",
+        "onchange": "^7.0.0",
+        "parallelshell": "3.0.1",
+        "rimraf": "^3.0.2",
+        "usemin-cli": "^0.6.0"
+    },
+    "dependencies": {
+        "bootstrap": "^4.5.2",
+        "copyfiles": "^2.2.0",
+        "jquery": "^3.5.1",
+        "popper.js": "^1.16.1"
+    }
 }
