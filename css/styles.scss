@@ -1,3 +1,5 @@
+// TODO change color scheme to something nicer looking
+    // Take a look at the Triadic color scheme option in W3schools
 $color-primary: #347b98;
 $color-secondary: #0247FE;
 $color-pale: #E3F7D4;
@@ -12,7 +14,6 @@ $header-font: Helvetica;
 
 body {
     font-family: $body-font;
-    // font-size: small;
 }
 
 h1, h2, h3 {
@@ -55,15 +56,9 @@ footer {
     color: white;
 }
 
-.card {
-    border-color: black;
-}
-
 .frf-list-item {
-    // padding: 20px 0;
     border-bottom: 1px dashed;
     border-color: $color-mid;
-    // min-height: 10px;
 }
 
 .navbar {
@@ -85,3 +80,11 @@ footer {
 .frf-table-bordered th, .frf-table-bordered td {
     border-color: $color-mid;
 }
+
+
+// BUG The stuff below is just for testing purposes. Please delete as soon as it becomes unnecessary
+$color-test: #C13427;
+
+.frf-temp-navbar {
+    background-color: $color-test;
+};

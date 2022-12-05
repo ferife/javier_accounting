@@ -40,7 +40,7 @@
             </button>
             <div class="collapse navbar-collapse" id="accountingNavbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">PLACEHOLDER</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">PLACEHOLDER</a></li>
                 </ul>
@@ -55,59 +55,32 @@
 
 
 
-    <div class="container-fluid my-3">
-        <div class="row">
-
-            <div class="col-12 col-md-4 mb-3">
-                <!-- FUNCTIONALITY Company Announcements table -->
-                <div class="card">
-                    <div class="card-header text-white bg-dark">
-                        <h5 class="text-center">Company Announcements</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-1 frf-list-item"> Merry <br /> Christmas! </li>
-                        </ul>
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="row mt-3 align-items-center">
+            <div class="col">
+                <table class="table table-bordered table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <!-- TODO Search filters -->
+                            <!-- ASK JAVIER Are these really the only two pieces of information we're supposed to have about the clients? -->
+                            <!-- ASK JAVIER What column to include on this table? -->
+                            <th scope="col">Client Name</th>
+                            <th scope="col">Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!-- FUNCTIONALITY Hyperlink this to the appropriate client's profile -->
+                            <td>Client 1</td>
+                            <td>San Antonio, Texas, USA</td>
+                        </tr>
+                        <tr>
+                            <td>Client 2</td>
+                            <td>Mexico City, Mexico</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <!-- FUNCTIONALITY Open Tasks table -->
-            <!-- FUNCTIONALITY Let the clicking of a task lead to the task -->
-            <div class="col mb-3">
-                <div class="card">
-                    <div class="card-header bg-dark text-white">
-                        <h5 class="text-center">Open Tasks</h5>
-                    </div>
-                    <div class="card-body">
-                        <table class="table table-bordered table-sm table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Client</th>
-                                    <th scope="col">Type</th>
-                                    <th scope="col">Due Date</th>
-                                    <th scope="col">Priority</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Client 1</td>
-                                    <td>Type 1</td>
-                                    <td>Dec 31, 2022</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>Client 2</td>
-                                    <td>Type 2</td>
-                                    <td>Jan 1, 2023</td>
-                                    <td>2</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
@@ -123,9 +96,9 @@
             </button>
             <div class="collapse navbar-collapse" id="accountingNavbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#">INDEX</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">INDEX</a></li>
                     <li class="nav-item"><a class="nav-link" href="general.html">GENERAL</a></li>
-                    <li class="nav-item"><a class="nav-link" href="search.html">SEARCH</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">SEARCH</a></li>
                 </ul>
             </div>
         </div>

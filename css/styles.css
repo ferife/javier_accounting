@@ -31,9 +31,6 @@ footer {
   background-image: linear-gradient(to right, #0247FE, #347b98, #091534);
   color: white; }
 
-.card {
-  border-color: black; }
-
 .frf-list-item {
   border-bottom: 1px dashed;
   border-color: #66B032; }
@@ -52,3 +49,6 @@ footer {
 
 .frf-table-bordered th, .frf-table-bordered td {
   border-color: #66B032; }
+
+.frf-temp-navbar {
+  background-color: #C13427; }
