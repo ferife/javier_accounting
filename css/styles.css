@@ -14,11 +14,25 @@ header p {
   margin-top: auto;
   margin-bottom: auto; }
 
+footer {
+  width: 100%;
+  background-color: #347b98;
+  color: #E3F7D4; }
+  footer a {
+    color: #E3F7D4;
+    text-decoration: underline; }
+  footer p, footer a {
+    margin-top: auto;
+    margin-bottom: auto; }
+
 .jumbotron {
   margin: 0;
   padding: 10px;
   background-image: linear-gradient(to right, #0247FE, #347b98, #091534);
   color: white; }
+
+.card {
+  border-color: black; }
 
 .frf-list-item {
   border-bottom: 1px dashed;
@@ -32,13 +46,9 @@ header p {
   color: #E3F7D4;
   border-color: #E3F7D4; }
 
-footer {
-  width: 100%;
-  background-color: #347b98;
-  color: #E3F7D4; }
-  footer a {
-    color: #E3F7D4;
-    text-decoration: underline; }
-  footer p, footer a {
-    margin-top: auto;
-    margin-bottom: auto; }
+.frf-add-client-btn:hover {
+  color: #0247FE;
+  background-color: white; }
+
+.frf-table-bordered th, .frf-table-bordered td {
+  border-color: #66B032; }

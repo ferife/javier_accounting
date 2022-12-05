@@ -12,6 +12,7 @@ $header-font: Helvetica;
 
 body {
     font-family: $body-font;
+    // font-size: small;
 }
 
 h1, h2, h3 {
@@ -32,11 +33,30 @@ header {
     }
 }
 
+footer {
+    width: 100%;
+    background-color: $color-primary;
+    color: $color-pale;
+    a {
+        color: $color-pale;
+        text-decoration: underline;
+    }
+    p, a {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+
 .jumbotron {
     margin: 0;
     padding: 10px;
     background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
     color: white;
+}
+
+.card {
+    border-color: black;
 }
 
 .frf-list-item {
@@ -56,17 +76,12 @@ header {
     border-color: $color-pale;
 }
 
-footer {
-    width: 100%;
-    background-color: $color-primary;
-    color: $color-pale;
-    a {
-        color: $color-pale;
-        text-decoration: underline;
-    }
-    p, a {
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+
+.frf-add-client-btn:hover {
+    color: $color-secondary;
+    background-color: white;
 }
 
+.frf-table-bordered th, .frf-table-bordered td {
+    border-color: $color-mid;
+}

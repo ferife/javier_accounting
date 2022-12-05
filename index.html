@@ -20,21 +20,21 @@
 
 <body>
     <header class="jumbotron jumbotron-fluid">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col">
                     <h1>Program Name</h1>
                     <h2>Program Tagline</h2>
                 </div>
                 <div class="col d-flex justify-content-end">
-                    <p>Hello, INSERT USER'S FIRST NAME HERE</p>
+                    <p class="text-right">Hello, INSERT USER'S FIRST NAME HERE</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        <div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <div class="container-fluid">
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#accountingNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,7 +42,6 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="general.html">GENERAL</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">PLACEHOLDER</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">PLACEHOLDER</a></li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -55,41 +54,71 @@
     </nav>
 
 
+<!-- TODO: Adjust space that each thing takes up in the container based on the 5 main viewport sizes -->
+
+    <div class="container-fluid my-3">
+        <div class="row">
 
 
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col">
-                Example Content
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col col-md-4">
+            <div class="col-12 col-md-4 mb-3">
+                <!-- TODO: Add functionality to Company Announcements table -->
                 <div class="card">
-                    <div class="card-header text-white bg-dark"><h5 class="text-center">Company Announcements</h5></div>
+                    <div class="card-header text-white bg-dark">
+                        <h5 class="text-center">Company Announcements</h5>
+                    </div>
                     <div class="card-body">
                         <ul class="list-unstyled mb-0">
-                            <li class="mb-1 frf-list-item">Testing<br/>Testing</li>
-                            <li class="mb-1 frf-list-item">Testing<br/>Testing</li>
+                            <li class="mb-1 frf-list-item"> Merry <br /> Christmas! </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- TODO: Add functionality to Open Tasks table -->
+            <div class="col mb-3">
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="text-center">Open Tasks</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Client</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Due Date</th>
+                                    <th scope="col">Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Client 1</td>
+                                    <td>Type 1</td>
+                                    <td>Dec 31, 2022</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Client 2</td>
+                                    <td>Type 2</td>
+                                    <td>Jan 1, 2023</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- TODO: Add functionality to Company Announcements table -->
-    <!-- TODO: Open Tasks table (Columns: Type, Client, Due Date) -->
-    <!-- TODO: Notes sent between users (allow sending to other specific users or to all users) -->
+    
+    
 
 
 
 
     <footer class="fixed-bottom">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col">
                     <a class="nav-link" href="#">Settings</a>
@@ -98,7 +127,7 @@
                     <a class="nav-link" href="#">Log Out</a>
                 </div>
                 <div class="col">
-                    <p>Tel: 1-234-567-8900</p>
+                    <p class="fw-bolder">Tel: 1-234-567-8900</p>
                 </div>
                 <div class="col">
                     <p>Email: mail@domain.com</p>
